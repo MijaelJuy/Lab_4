@@ -71,3 +71,7 @@ fun ViewHolaCursoPreview() {
         ViewHolaCurso()
     }
 }
+
+
+
+//prueba

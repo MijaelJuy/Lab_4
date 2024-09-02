@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.*
@@ -15,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.font.FontWeight
 import com.example.lab_4.ui.theme.Lab_4Theme
 
 class MainActivity : ComponentActivity() {
@@ -31,8 +31,7 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                 ) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    ViewHolaCurso(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -42,36 +41,39 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    var text by remember { mutableStateOf("") }
-
+fun ViewHolaCurso(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
-            .fillMaxSize()
-            .padding(16.dp)
+            .fillMaxWidth()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        LazyColumn(
-            modifier = Modifier.weight(1f)
-        ) {
-            items(10) { index ->
-                Text(text = "Item #$index")
-            }
-        }
-
+        Text(
+            text = "Welcome to the Course!",
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold
+        )
         Spacer(modifier = Modifier.height(16.dp))
-
-        OutlinedTextField(
-            value = text,
-            onValueChange = { text = it },
-            label = { Text("Enter text") }
+        Text(
+            text = "Hello, Student!",
+            fontSize = 20.sp
         )
     }
 }
 
+class Alignment {
+
+}
+
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun ViewHolaCursoPreview() {
     Lab_4Theme {
-        Greeting("Android")
+        ViewHolaCurso()
     }
 }
+
+
+
+
+//prueba

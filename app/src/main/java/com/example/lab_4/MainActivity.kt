@@ -11,6 +11,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -46,30 +47,21 @@ fun ViewHolaCurso(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = "Welcome to the Course!",
-            fontSize = 28.sp,
-            fontWeight = FontWeight.Bold
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.primary
         )
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(24.dp))
         Text(
             text = "Hello, Student!",
-            fontSize = 20.sp
+            fontSize = 22.sp
         )
     }
-}
-
-class Alignment {
-    companion object {
-        val CenterHorizontally: androidx.compose.ui.Alignment.Horizontal
-            get() {
-                TODO()
-            }
-    }
-
 }
 
 @Preview(showBackground = true)
@@ -79,8 +71,3 @@ fun ViewHolaCursoPreview() {
         ViewHolaCurso()
     }
 }
-
-
-
-
-//prueba2

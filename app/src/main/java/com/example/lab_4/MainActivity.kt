@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import com.example.lab_4.ui.theme.Lab_4Theme
 
 class MainActivity : ComponentActivity() {
@@ -62,6 +63,12 @@ fun ViewHolaCurso(modifier: Modifier = Modifier) {
 }
 
 class Alignment {
+    companion object {
+        val CenterHorizontally: androidx.compose.ui.Alignment.Horizontal
+            get() {
+                TODO()
+            }
+    }
 
 }
 
@@ -76,4 +83,4 @@ fun ViewHolaCursoPreview() {
 
 
 
-//prueba
+//prueba2
